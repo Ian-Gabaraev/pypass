@@ -29,11 +29,12 @@ def not_a_word(password):
 
 
 def generate_password(length, complexity):
+    charset = password_complexity[complexity]
     password = ""
     for _ in range(length):
-        password += complexity[random.randint(0, len(complexity)-1)]
+        password += charset[random.randint(0, len(charset)-1)]
     if not_a_word(password):
         return password
 
 # Test case
-print generate_password(12, password_complexity['all_upper'])
+print generate_password(12, 'all_upper')
