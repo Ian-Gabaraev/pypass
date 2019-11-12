@@ -37,4 +37,4 @@ def generate_password(length, complexity):
         return password
 
 # Test case
-print generate_password(12, 'all_upper')
+print generate_password(12, 'mixed')
